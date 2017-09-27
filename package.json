@@ -23,6 +23,8 @@
   "homepage": "https://github.com/walkerzheng/NodeWithReact#readme",
   "dependencies": {
     "express": "^4.15.5",
+    "mongoose": "^4.11.13",
+    "nodemon": "^1.12.1",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
     "password": "^0.1.1"
