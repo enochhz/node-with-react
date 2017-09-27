@@ -18,8 +18,15 @@ passport.use(
             console.log('refreshToken ', refreshToken);
             console.log('profile', profile);
             console.log('================== Done ======================================\n');
-            new Users({ googleId : profile.id}).save(); // save() put the model instance into mongodb collection
-            console.log('success: new User created.')
+            Users.findOne({ googleId: profile.id}).then((existingUser) => {
+               if (existingUser)  {
+                   // we already have a record with the given profile ID
+                   console.log('Old user login');
+               } else {
+                   new Users({ googleId : profile.id}).save(); // save() put the model instance into mongodb collection
+                   console.log('A new User login!\nsuccess: new User created.');
+               }
+            })
         }
     )
 );
