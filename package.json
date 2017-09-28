@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/walkerzheng/NodeWithReact#readme",
   "dependencies": {
+    "cookie-session": "^1.3.2",
     "express": "^4.15.5",
     "mongoose": "^4.11.13",
     "nodemon": "^1.12.1",
