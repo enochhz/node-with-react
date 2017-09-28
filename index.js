@@ -6,7 +6,6 @@ const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
 
-// mongoose.Promise = require('bluebird');
 mongoose.connect(keys.mongoURI);
 
 const app = express();

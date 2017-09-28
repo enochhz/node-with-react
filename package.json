@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/walkerzheng/NodeWithReact#readme",
   "dependencies": {
-    "bluebird": "^3.5.0",
     "cookie-session": "^1.3.2",
     "express": "^4.15.5",
     "mongoose": "^4.11.13",
