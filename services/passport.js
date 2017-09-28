@@ -6,11 +6,11 @@ const keys = require("./../config/keys");
 const Users = mongoose.model("users");
 
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+    done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-    User.findById(id).then(user => {
+    Users.findById(id).then(user => {
         done(null, user);
     })
 });
@@ -29,7 +29,7 @@ passport.use(
       Users.findOne({ googleId: profile.id }).then(existingUser => {
         if (existingUser) {
           // we already have a record with the given profile ID
-          done(nul, existingUser); // first argu: err is null, second argu: exist user
+          done(null, existingUser); // first argu: err is null, second argu: exist user
         } else {
           new Users({ googleId: profile.id })
             .save()
@@ -39,3 +39,4 @@ passport.use(
     }
   )
 );
+
