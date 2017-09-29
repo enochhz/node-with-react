@@ -21,7 +21,6 @@ passport.use(
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
       callbackURL: "/auth/google/callback",
-      // callbackURL: 'https://sleepy-escarpment-82316.herokuapp.com/auth/google/callback',
       proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
