@@ -1,4 +1,5 @@
 # NodeWithReact
+This is a full stack web app building with NodeJS, React, Redux, Express, and MongoDB.
 ## Youtube Video Running Tutorial
 https://youtu.be/YWQrjDPSN0c
 ## Run
