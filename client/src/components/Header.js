@@ -5,15 +5,17 @@ class Header extends Component {
   renderContent() {
     switch (this.props.auth) {
       case null:
-        return 'Still deciding';
+        return;
       case undefined:
-        return 'im loggedout';
+        return (
+          <li><a href="/auth/google">Login with Google</a></li>
+        )
       default:
-        return 'im loggged in';
+        return <li><a>Logout</a></li>;
     }
   }
   render() {
-      console.log(this.props.auth);
+      console.log(this.props);
     return (
       <nav className="blue darken-2">
         <div className="nav-wrapper">
