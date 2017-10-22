@@ -12,7 +12,7 @@ export default [
   { label: "Email body", name: "body", noValueError: "You must provide body" },
   {
     label: "RecippientList (Ex: first@gmail.com, second@gmail.com)",
-    name: "emails",
+    name: "recipients",
     noValueError: "You must provide recipients"
   }
 ]
