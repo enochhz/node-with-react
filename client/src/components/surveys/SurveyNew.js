@@ -8,7 +8,7 @@ class SurveyNew extends Component {
 
   renderContent() {
     if (this.state.showFormReviw === true) {
-      return <SurveyFormReivew />;
+      return <SurveyFormReivew onCancel={() => this.setState({ showFormReviw: false})}/>;
     }
     return (
       <SurveyForm
