@@ -6,7 +6,7 @@ export default [
   },
   {
     label: "Subject Line",
-    name: "subjects",
+    name: "subject",
     noValueError: "You must provide subject"
   },
   { label: "Email body", name: "body", noValueError: "You must provide body" },
