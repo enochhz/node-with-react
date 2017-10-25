@@ -29,10 +29,10 @@ module.exports = app => {
         }
       })
       .compact()
-      .uniqBy("email", "surveyId")
+      .uniqBy('email', 'surveyId')
       .each(({ surveyId, email, choice })=> {
         // update new survey in database
-        Survey.findOne({
+        Survey.updateOne({
           _id: surveyId,
           recipients: {
             $elemMatch: { email: email, responded: false}
