@@ -18,7 +18,7 @@ module.exports = app => {
   });
 
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
-    res.send("Thanks for your response!");
+    res.redirect("/thanks/thankyou");
   });
 
   app.post("/api/surveys/webhooks", (req, res) => {

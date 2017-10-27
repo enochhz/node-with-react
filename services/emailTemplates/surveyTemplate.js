@@ -3,16 +3,25 @@ const keys = require('../../config/keys');
 module.exports = survey => {
   return `
     <html>
+      <head>
+        <style>
+          #block_container {
+            text-align: center;
+          }
+          #yes, #no {
+            display: inline;
+          }
+        </style>
+      </head>
       <body>
         <div style='text-align: center;'>
-          <h3>I'd like you input!</h3>
-          <p>Please answer the following questions:</p>
-          <p>${survey.body}</p>
-          <div>
-            <a href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">Yes</a>
-          </div>
-          <div>
-            <a href="${keys.redirectDomain}/api/surveys/${survey.id}/no">No</a>
+          <h1>Please help us to import our servie for you!</h1>
+          <h3>Please answer the following questions:</h3>
+          <h3>${survey.body}</h3>
+
+          <div id="block_container">
+            <div id="yes"><a href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">Yes</a></div>
+            <div id="no"><a href="${keys.redirectDomain}/api/surveys/${survey.id}/no">No</a></div>
           </div>
         </div>
       </body>
